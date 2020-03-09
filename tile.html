@@ -1,0 +1,84 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="72bae950-92de-41d7-8028-7b5af9686e11" data-root-id="1007"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1112">
+          {"99e389fc-ea7d-4fb5-9ded-dfc888f6edf3":{"roots":{"references":[{"attributes":{"attribution":"&amp;copy; &lt;a href=\"https://www.openstreetmap.org/copyright\"&gt;OpenStreetMap&lt;/a&gt; contributors,&amp;copy; &lt;a href=\"https://cartodb.com/attributions\"&gt;CartoDB&lt;/a&gt;","url":"https://tiles.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"},"id":"1006","type":"WMTSTileSource"},{"attributes":{},"id":"1038","type":"ResetTool"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1055","type":"BoxAnnotation"},{"attributes":{"formatter":{"id":"1028","type":"MercatorTickFormatter"},"ticker":{"id":"1026","type":"MercatorTicker"}},"id":"1025","type":"MercatorAxis"},{"attributes":{"tile_source":{"id":"1006","type":"WMTSTileSource"}},"id":"1047","type":"TileRenderer"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1034","type":"PanTool"},{"id":"1035","type":"WheelZoomTool"},{"id":"1036","type":"BoxZoomTool"},{"id":"1037","type":"SaveTool"},{"id":"1038","type":"ResetTool"},{"id":"1039","type":"HelpTool"}]},"id":"1040","type":"Toolbar"},{"attributes":{},"id":"1034","type":"PanTool"},{"attributes":{},"id":"1012","type":"LinearScale"},{"attributes":{"dimension":"lat"},"id":"1028","type":"MercatorTickFormatter"},{"attributes":{"callback":null,"end":6000000,"start":-2000000},"id":"1008","type":"Range1d"},{"attributes":{"formatter":{"id":"1019","type":"MercatorTickFormatter"},"ticker":{"id":"1017","type":"MercatorTicker"}},"id":"1016","type":"MercatorAxis"},{"attributes":{},"id":"1039","type":"HelpTool"},{"attributes":{},"id":"1014","type":"LinearScale"},{"attributes":{"dimension":"lon"},"id":"1019","type":"MercatorTickFormatter"},{"attributes":{"callback":null,"end":7000000,"start":-1000000},"id":"1010","type":"Range1d"},{"attributes":{"dimension":"lon"},"id":"1017","type":"MercatorTicker"},{"attributes":{"dimension":"lat"},"id":"1026","type":"MercatorTicker"},{"attributes":{},"id":"1035","type":"WheelZoomTool"},{"attributes":{"dimension":1,"ticker":{"id":"1026","type":"MercatorTicker"}},"id":"1033","type":"Grid"},{"attributes":{"overlay":{"id":"1055","type":"BoxAnnotation"}},"id":"1036","type":"BoxZoomTool"},{"attributes":{"text":""},"id":"1050","type":"Title"},{"attributes":{"below":[{"id":"1016","type":"MercatorAxis"}],"center":[{"id":"1024","type":"Grid"},{"id":"1033","type":"Grid"}],"left":[{"id":"1025","type":"MercatorAxis"}],"renderers":[{"id":"1047","type":"TileRenderer"}],"title":{"id":"1050","type":"Title"},"toolbar":{"id":"1040","type":"Toolbar"},"x_range":{"id":"1008","type":"Range1d"},"x_scale":{"id":"1012","type":"LinearScale"},"y_range":{"id":"1010","type":"Range1d"},"y_scale":{"id":"1014","type":"LinearScale"}},"id":"1007","subtype":"Figure","type":"Plot"},{"attributes":{"ticker":{"id":"1017","type":"MercatorTicker"}},"id":"1024","type":"Grid"},{"attributes":{},"id":"1037","type":"SaveTool"}],"root_ids":["1007"]},"title":"Bokeh Application","version":"1.3.4"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1112').textContent;
+                  var render_items = [{"docid":"99e389fc-ea7d-4fb5-9ded-dfc888f6edf3","roots":{"1007":"72bae950-92de-41d7-8028-7b5af9686e11"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
