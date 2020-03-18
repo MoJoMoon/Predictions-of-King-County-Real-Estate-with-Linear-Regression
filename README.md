@@ -2,6 +2,7 @@
 # Module 2 Final Project
 Morgan Jones
 
+<img src='Seattle-Sunset.jpg'>
 
 ## Introduction
 
@@ -25,37 +26,17 @@ For this notebook, we will build a **Multivariate Linear Regression** model to *
 
 There are 3 key metrics for evaluation to be used to assess if our model is considered successful. For the purposes of this notebook these will be:
 
-***P-values***: The $p-value$ or *probability value* is the probability of observing test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is true. For our multivariate linear regression model, we will set our *alpha value* to 0.05,  $\alpha = 0.05$, equating to a *.95 probability* that the predictor is statistically significantly in effecting the price of the house.We will compare the p-values of our predictors to this alpha value so that:
+***P-values***: The p-value or *probability value* is the probability of observing test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is true. For our multivariate linear regression model, we will set our *alpha value* to 0.05, equating to a *.95 probability* that the predictor is statistically significantly in effecting the price of the house.We will compare the p-values of our predictors to this alpha value so that:
 
-> $p < 0.05$  The feature has a statistically significant effect on the price of a house
+> p < 0.05  The feature has a statistically significant effect on the price of a house
 
-> $p >= 0.05$  The feature does not have a statistically significant impact on the price of a house and will not be included in the model.
+> p >= 0.05  The feature does not have a statistically significant impact on the price of a house and will not be included in the model.
 
-***Coefficients***: The coefficients of the features also describe the mathematical relationship between each independent variable and the dependent variable, which in this case is the price of the house. The coefficient value demonstrates how much the mean of the target variable changes given a one-unit change in the feature variable when the other features are unchanged.  They also inform us if there is a positive or negative correlation between the features and target. For our notebook, we will assess the coefficients of our features to ensure we have features that are relevant to the price the houses. For a multivariate linear regression model
+***Coefficients***: The coefficients of the features also describe the mathematical relationship between each independent variable and the dependent variable, which in this case is the price of the house. The coefficient value demonstrates how much the mean of the target variable changes given a one-unit change in the feature variable when the other features are unchanged.  They also inform us if there is a positive or negative correlation between the features and target. For our notebook, we will assess the coefficients of our features to ensure we have features that are relevant to the price the houses.
 
-$$ \hat y = \hat\beta_0 + \hat\beta_1 x_1 + \hat\beta_2 x_2 +\ldots + \hat\beta_n x_n $$ 
+***Adjusted R^2***: The Adjusted R^2 is a key metric for evaluation of a multivariate linear regression model, as it accounts for the number of predictors in a model when calculating the model's goodness-of-fit. It is a more accurate measure for assessing if our model explains changes in the dependent variable. The goal for our model will be **Adjusted R^2 >= 0.75**, where an Adjusted R-squared value of say 0.75 can be described conceptually as: 
 
-the coefficients are recognized as: $$\hat\beta_n$$
-
-***Adjusted $R^2$***: The Adjusted $R^2$ is a key metric for evaluation of a multivariate linear regression model, as it accounts for the number of predictors in a model when calculating the model's goodness-of-fit. It is a more accurate measure for assessing if our model explains changes in the dependent variable. The goal for our model will be **Adjusted $R^2 >= 0.75$**, where
-
-$$SS_{residual} = \sum (y - \hat{y})^2 $$
-
-is the squared difference between $y$ and $\hat y$ (predicted y)
-
-$$SS_{total} = \sum (y - \bar{y})^2 $$
-
-is the squared difference between $y$ and $\overline y$ (mean of y)
-
-So that
-
-$$R^2 = 1- \dfrac{SS_{residual}}{SS_{total}}$$
-
-$$R^2_{adj}= 1-(1-R^2)\dfrac{n-1}{n-p-1}$$
-
-An Adjusted R-squared value of say 0.75 can be described conceptually as: 
-
-> ***75% of the variations in dependent variable $y$ are explained by the independent variables in our model.***
+> ***75% of the variations in dependent variable y are explained by the independent variables in our model.***
  
 ## Dataset
 
