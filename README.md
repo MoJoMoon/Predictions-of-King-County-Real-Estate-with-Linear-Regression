@@ -2,7 +2,7 @@
 # Module 2 Final Project
 Morgan Jones
 
-<img src='Seattle-Sunset.jpg'>
+<img src='forest house.jpg'>
 
 ## Introduction
 
