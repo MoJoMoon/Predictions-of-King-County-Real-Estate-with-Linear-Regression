@@ -1,160 +1,144 @@
 
 # Module 2 Final Project
+Morgan Jones
 
 
 ## Introduction
 
-In this lesson, we'll review all of the guidelines and specifications for the final project for Module 2.
+Cocoricos is a Real Estate Tokenization platform which users can leverage to sell their property or part of their residence's income via Blockchain. With Cocoricos, real estate investors and owners are able to be guided through the legal and technical aspects of tokenizing real estate and gain access to shared house ownership. The Cocoricos platforms has tokenized house values in San Francisco, Paris, New York, London, and Tokyo among others. 
 
+In the hypothetical business case for this project we have been **hired by Cocoricos to analyze the King County Housing Market and gather insights into the trends of the housing market**, as the Cocoricos executives are interested in launching a targeted advertising campaign in area King County area. Specifically, they would like to **target the more valuable residential properties**, as these homes would lead to more value being added to the Cocoricos blockcahin.
+
+   Our project will be centered around **conducting statistical analysis on the prices of the King County residences**, and developing a **Multivariate Linear Regression model which can accurately predict the sale price of a house** in the area. The predictions and coefficients of our model will serve as a business solution for the Cocoricos advertising department to assess which property owners are most suitable to build their advertisement campaign for, as well as for real estate investors using the Cocoricos platform to make more informed decisions as to what houses to invest in.
+   
 ## Objectives
-You will be able to:
-* Describe all required aspects of the final project for Module 2
-* Describe all required deliverables
-* Describe what constitutes a successful project
 
-## Final Project Summary
+For this notebook, we will build a **Multivariate Linear Regression** model to ***predict*** the ***sale price of houses*** in the King County Housing Market of Washington, USA as accurately as we can. In order to achieve this objective, we will clean, explore, and model the dataset with linear regression model. As such we will need to complete the following tasks:
 
-Another module down--you're almost half way there!
-
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-mod-2-project-v2-1/master/halfway-there.gif)
-
-All that remains in Module 2 is to put our newfound data science skills to use with a final project! You should expect this project to take between 20 and 25 hours of solid, focused effort. If you're done way quicker, go back and dig in deeper or try some of the optional "level up" suggestions. If you're worried that you're going to get to 30 hrs and still not even have the data imported, reach out to an instructor in Slack ASAP to get some help!
-
-## The Dataset
-
-For this project, you'll be working with the King County House Sales dataset. We've modified the dataset to make it a bit more fun and challenging.  The dataset can be found in the file `"kc_house_data.csv"`, in this repo.
-
-The description of the column names can be found in the column_names.md file in this repository. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions relating to what the data means.
-
-You'll clean, explore, and model this dataset with a multivariate linear regression to predict the sale price of houses as accurately as possible.
-
-## The Deliverables
-
-For online students, there will be five deliverables for this project (Note: On-campus students may have different requirements, please speak with your instructor):
-
-1. A well documented **Jupyter Notebook** containing any code you've written for this project and comments explaining it. This work will need to be pushed to your GitHub repository in order to submit your project.  
-2. An organized **README.md** file in the GitHub repository that describes the contents of the repository. This file should be the source of information for navigating through the repository.
-3. A short **Keynote/PowerPoint/Google Slides presentation** (delivered as a PDF export) giving a high-level overview of your methodology and recommendations for non-technical stakeholders. Make sure to also add and commit this pdf of your non-technical presentation to your repository with a file name of presentation.pdf.
-4. **[A Blog Post](https://github.com/learn-co-curriculum/dsc-welcome-blogging-v2-1)**	
-5. A **Video Walkthrough** of your non-technical presentation. Some common video recording tools used are Zoom, Quicktime, and Nimbus. After you record your presentation, publish it on a service like YouTube or Google Drive, you will need a link to the video to submit your project.
-
-Note: On-campus students may have different requirements, please speak with your instructor.
-
-### Jupyter Notebook Must-Haves
-
-For this project, your Jupyter Notebook should meet the following specifications:
-
-#### Organization/Code Cleanliness
-
-* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.  All functions have docstrings that act as professional-quality documentation
-* The notebook is written for technical audiences with a way to both understand your approach and reproduce your results. The target audience for this deliverable is other data scientists looking to validate your findings.
-
-#### Visualizations & EDA
-
-* Your project contains at least 4 meaningful data visualizations, with corresponding interpretations. All visualizations are well labeled with axes labels, a title, and a legend (when appropriate)  
-* You pose at least 3 meaningful questions and answer them through EDA.  These questions should be well labeled and easy to identify inside the notebook.
-    * **Level Up**: Each question is clearly answered with a visualization that makes the answer easy to understand.   
-* Your notebook should contain 1 - 2 paragraphs briefly explaining your approach to this project.
-
-#### Model Quality/Approach
-
-* Your model should not include any predictors with p-values greater than .05.  
-* Your notebook shows an iterative approach to modeling, and details the parameters and results of the model at each iteration.  
-    * **Level Up**: Whenever necessary, you briefly explain the changes made from one iteration to the next, and why you made these choices.  
-* You provide at least 1 paragraph explaining your final model.   
-* You pick at least 3 coefficients from your final model and explain their impact on the price of a house in this dataset.   
-
-
-### Non-Technical Presentation Must-Haves
-
-Another deliverable should be a Keynote, PowerPoint or Google Slides presentation delivered as a pdf file in your fork of this repository with the file name of `presentation.pdf` detailing the results of your project.  Your target audience is non-technical people interested in using your findings to maximize their profit when selling their home.
-
-Your presentation should:
-
-* Contain between 5 - 10 professional-quality slides.  
-    * **Level Up**: The slides should use visualizations whenever possible, and avoid walls of text.
-* Take no more than 5 minutes to present.   
-* Avoid technical jargon and explain the results in a clear, actionable way for non-technical audiences.   
-
-**_Based on the results of your models, your presentation should discuss at least two concrete features that highly influence housing prices._**
-
-### Blog Post Must-Haves
-
-Refer back to the [Blogging Guidelines](https://github.com/learn-co-curriculum/dsc-welcome-blogging-v2-1) for the technical requirements and blog ideas.
-
-
-## The Process 
-The process for this project is identical to the process you followed for your module 1 project. We specified it again below as a refresher.
-(Note: On-campus students may have different processes, please speak with your instructor)
-
-### 1. Getting Started
-
-Please start by reviewing this document. If you have any questions, please ask them in Slack ASAP so (a) we can answer the questions and (b) so we can update this repository to make it clearer.
-
-Be sure to let the instructor team know when you’ve started working on a project, either by reaching out over Slack or, if you are in a full-time or part-time cohort, by connecting with your Cohort Lead in your weekly 1:1. If you’re not sure who to reach out to, post in the #online-ds-sp-000 channel in Slack.
-
-Once you're done with this module, please start on the project. Do that by forking this repository, cloning it locally, and working in the student.ipynb file. Make sure to also add and commit a pdf of your presentation to the repository with a file name of `presentation.pdf`.
-
-### 2. The Project Review
-
-_Note: On-campus students may have different review processes, please speak with your instructor._
-
-> **When you start on the project, please also reach out to an instructor immediately to schedule your project review** (if you're not sure who to schedule with, please ask in Slack!)
-
-#### What to expect from the Project Review
-
-Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation *(sometimes technical interviews will feel arbitrary or unfair - if you want to get the job, commenting on that is seldom a good choice)*.
-
-The project review is comprised of a 45 minute 1:1 session with one of the instructors. During your project review, be prepared to:
-
-#### 1. Deliver your PDF presentation to a non-technical stakeholder.
-In this phase of the review (~10 mins) your instructor will play the part of a non-technical stakeholder that you are presenting your findings to. The presentation  should not exceed 5 minutes, giving the "stakeholder" 5 minutes to ask questions.
-
-In the first half of the presentation (2-3 mins), you should summarize your methodology in a way that will be comprehensible to someone with no background in data science and that will increase their confidence in you and your findings. In the second half (the remaining 2-3 mins) you should summarize your findings and be ready to answer a couple of non-technical questions from the audience. The questions might relate to technical topics (sampling bias, confidence, etc) but will be asked in a non-technical way and need to be answered in a way that does not assume a background in statistics or machine learning. You can assume a smart, business stakeholder, with a non-quantitative college degree.
-
-#### 2. Go through the Jupyter Notebook, answering questions about how you made certain decisions. Be ready to explain things like:
-    * "How did you pick the question(s) that you did?"
-    * "Why are these questions important from a business perspective?"
-    * "How did you decide on the data cleaning options you performed?"
-    * "Why did you choose a given method or library?"
-    * "Why did you select those visualizations and what did you learn from each of them?"
-    * "Why did you pick those features as predictors?"
-    * "How would you interpret the results?"
-    * "How confident are you in the predictive quality of the results?"
-    * "What are some of the things that could cause the results to be wrong?"
-
-Think of the first phase of the review (~30 mins) as a technical boss reviewing your work and asking questions about it before green-lighting you to present to the business team. You should practice using the appropriate technical vocabulary to explain yourself. Don't be surprised if the instructor jumps around or sometimes cuts you off - there is a lot of ground to cover, so that may happen.
-
-If any requirements are missing or if significant gaps in understanding are uncovered, be prepared to do one or all of the following:
-* Perform additional data cleanup, visualization, feature selection, modeling and/or model validation
-* Submit an improved version
-* Meet again for another Project Review
-
-What won't happen:
-* You won't be yelled at, belittled, or scolded
-* You won't be put on the spot without support
-* There's nothing you can do to instantly fail or blow it
-
-**Please note: We need to receive the URL of your repository at least 24 hours before and please have the project finished at least 3 hours before your review so we can look at your materials in advance.**
-
-
-## Submitting your Project
-
- You’re almost done! In order to submit your project for review, include the following links to your work in the corresponding fields on the right-hand side of Learn.
-
- 1. **GitHub Repo:** Now that you’ve completed your project in Jupyter Notebooks, push your work to GitHub and paste that link to the right. (If you need help doing so, review the resources [here](https://docs.google.com/spreadsheets/d/1CNGDhjcQZDRx2sWByd2v-mgUOjy13Cd_hQYVXPuzEDE/edit#gid=0).)
-_Reminder: Make sure to also add and commit a pdf of your non-technical presentation to the repository with a file name of presentation.pdf._
-2. **Blog Post:** Include a link to your blog post.
-3. **Record Walkthrough:** Include a link to your video walkthrough.
-
- Hit "I'm done" to wrap it up. You will receive an email in order to schedule your review with your instructor.
+ - Understand the Data: Construct a unique business case around the model. Analyze the dataset from various points of view.
+ - Preprocess the Data: Import the data and preprocess the data through cleaning, scrubbing, handling missing values, and exploring different methods with benchmarking.
+ - Describe the Data: Conduct EDA. Create novel distributions, compare multiple distributions, and find insights in the data.
+ - Fit models and conduct Hypothesis Testing: Compare multiple models and give detailed numerical and visual analysis of models.
+ - Gather insights: Give a conclusion with recommendations that are business relevant and are driven by analysis
  
+## Metrics for Evaluation
+
+There are 3 key metrics for evaluation to be used to assess if our model is considered successful. For the purposes of this notebook these will be:
+
+***P-values***: The $p-value$ or *probability value* is the probability of observing test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is true. For our multivariate linear regression model, we will set our *alpha value* to 0.05,  $\alpha = 0.05$, equating to a *.95 probability* that the predictor is statistically significantly in effecting the price of the house.We will compare the p-values of our predictors to this alpha value so that:
+
+> $p < 0.05$  The feature has a statistically significant effect on the price of a house
+
+> $p >= 0.05$  The feature does not have a statistically significant impact on the price of a house and will not be included in the model.
+
+***Coefficients***: The coefficients of the features also describe the mathematical relationship between each independent variable and the dependent variable, which in this case is the price of the house. The coefficient value demonstrates how much the mean of the target variable changes given a one-unit change in the feature variable when the other features are unchanged.  They also inform us if there is a positive or negative correlation between the features and target. For our notebook, we will assess the coefficients of our features to ensure we have features that are relevant to the price the houses. For a multivariate linear regression model
+
+$$ \hat y = \hat\beta_0 + \hat\beta_1 x_1 + \hat\beta_2 x_2 +\ldots + \hat\beta_n x_n $$ 
+
+the coefficients are recognized as: $$\hat\beta_n$$
+
+***Adjusted $R^2$***: The Adjusted $R^2$ is a key metric for evaluation of a multivariate linear regression model, as it accounts for the number of predictors in a model when calculating the model's goodness-of-fit. It is a more accurate measure for assessing if our model explains changes in the dependent variable. The goal for our model will be **Adjusted $R^2 >= 0.75$**, where
+
+$$SS_{residual} = \sum (y - \hat{y})^2 $$
+
+is the squared difference between $y$ and $\hat y$ (predicted y)
+
+$$SS_{total} = \sum (y - \bar{y})^2 $$
+
+is the squared difference between $y$ and $\overline y$ (mean of y)
+
+So that
+
+$$R^2 = 1- \dfrac{SS_{residual}}{SS_{total}}$$
+
+$$R^2_{adj}= 1-(1-R^2)\dfrac{n-1}{n-p-1}$$
+
+An Adjusted R-squared value of say 0.75 can be described conceptually as: 
+
+> ***75% of the variations in dependent variable $y$ are explained by the independent variables in our model.***
  
-## Grading Rubric
-Online students can find a PDF of the grading rubric for the project [here](https://github.com/learn-co-curriculum/dsc-mod-2-project-v2-1/blob/master/mod2_project_rubric.pdf). On-campus students may have different review processes, please speak with your instructor.
+## Dataset
 
+**Name** | **Description** | **Target/Feature** | **Cat/Num** | **Expected Datatype**
+:------------ |:--------------------------|:--------------:|:-------------:|-----------:
+`id` | Unique identifier for a house | Feature | Numeric | `int`
+`dateDate` | Date the house was sold | Feature | Numeric | `datetime`
+`pricePrice` | Price the house was sold for | **Target** | Numeric | `int`
+`bedroomsNumber` | Number of bedrooms in the house | Feature | Numeric | `int`
+`bathroomsNumber` | Number of bathrooms in the house | Feature | Numeric | `float`
+`sqft_livingsquare` | Square footage of the house | Feature | Numeric | `int`
+`sqft_lotsquare` | Square footage of the entire lot | Feature | Numeric |`int`
+`floorsTotal` | Number of floors (levels) in house | Feature | Numeric |`float`
+`waterfront` | If a house has a view of a waterfront | Feature | Categorical |`float`
+`view` | Number of times a house has been viewed | Feature | Categorical |`float`
+`condition` | A rating of the overall condition of the house | Feature | Numeric |`int`
+`grade` | Overall grade given to the housing unit, based on King County grading system | Feature | Numeric |`int`
+`sqft_above` | Square footage of house apart excluding basement | Feature | Numeric |`int`
+`sqft_basement` | Square footage of the basement | Feature | Numeric |`int`
+`yr_built` | Year the house was built | Feature | Numeric | `int`
+`yr_renovated` | Year the house was renovated | Feature | Numeric | `int`
+`zipcode` | Zipcode of the house's address | Feature | Categorical | `int`
+`lat` | Latitude coordinate | Feature | Numeric |`float`
+`long` | Longitude coordinate | Feature | Numeric | `float`
+`sqft_living15` | The square footage of interior housing living space for the nearest 15 neighbors | Feature | Numeric |`int`
+`sqft_lot15` | The square footage of the land lots of the nearest 15 neighbors | Feature | Numeric |`int`
+ 
+## Target Questions
 
-## Summary
+##### 1. What areas have the highest average price per house?
 
-The end of module projects and project reviews are a critical part of the program. They give you a chance to both bring together all the skills you've learned into realistic projects and to practice key "business judgement" and communication skills that you otherwise might not get as much practice with.
+<img src='king_5.png'>
+
+We have explored the `lat`, `long`, `zipcode`, `region`, and street/city features of our houses as they relate to price. The results from our exploration inform us that:
+
+   - Lat: Houses **above the latitude line 47.5** have a higher price on average
+   - Long: Houses **west of longitude line -122.1** have a higher average price 
+   - Zipcode: Zipcodes belonging to **Seattle and Bellevue** have a higher average price
+   - Region: Houses in the **Northwest region** of King County have the highest average price
+   - Street: **Evergreen Point Rd of Medina and W Lake Sammamish Pkwy SE of Bellevue** contain the most counts of valuable houses in King County.
+   - City: Most of the highest priced houses are in **Seattle and Bellevue**, with the two cities combining for half of the top 100 most expensive properties. The highest price value is in Seattle, however Seattle contains 41.5% of the houses
+
+Q1 Recommendations
+> The ad team can focus marketing in the Northwest region of King County around Seattle and Bellevue, using commercials, newspapaer/magazine ads, billboards, and special offers for residents in these areas. This could attract the property owners in the highest valued areas.
+
+##### 2. How does time impact the sale of a house?
+
+<img src='day_sold.png'>
+
+Our exploration of the temporal features has yielded several insights for real estate investors. After analyzing the days of the week, months, and seasons we can assert that:
+
+   - Days of the week: **Tuesday and Wednesday** each having 21% of the sales of houses in King County.
+   - Months: **May and April** have the highest count of house sales, with January and February having the lowest amount of house sales.
+   - Seasons: Spring and Summer, with their combined 60% market share have the highest counts of house sales of all the seasons in King County.
+   
+Q2 Recommendations
+> The ad team could focus on preparing their advertisement campaign for May and April when the highest amount of house transactions are made throughout the year, and stay away from marketing during January and February.
+
+##### 3. How does bedroom count effect house price?
+
+<img src='bedrooms.png'>
+
+Our analysis of house bedroom data showed that Here we can see a difference in that:
+    
+   - Over 75% of the most expensive properties in King County have 4-5 bedrooms while over 75% of all houses in King County have 3-4 bedrooms.
+   
+Q3 Recommendations
+> In the future the Cocoricos marketing team could gather data on new properties being built with these numbers of bedrooms in order to focus their resources on the houses most likely to sell for higher prices.
+
+## Final Model Comments
+
+<img src='final_model.png'>
+
+𝐴𝑑𝑗𝑅2  = 0.839
+
+We were able to increase our Adj R Sqaured value by an entire tenth through rigorous experimentation. 
+>83.9% of the variations in price  𝑦  are explained by the features in our model.
+
+Coefficient Comments:
+
+Overall high values for coefficients
+We have expounded on several of the original features with high coefficients in order to achieve this higher 𝐴𝑑𝑗𝑅2. The coefficients of our new features are also quite strong.
+
+𝑝−𝑣𝑎𝑙𝑢𝑒𝑠 
+
+All of our p-values are quite low, letting us know that our features are doing their job of informing the model as to the patterns within the price of the houses, and and are statistically significant to the variance in our dependent variable.
